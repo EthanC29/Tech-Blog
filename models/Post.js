@@ -48,7 +48,10 @@ Post.init(
     },
     post_url: {
       type: DataTypes.TEXT(options='long'),
-      allowNull: false
+      allowNull: false,
+      validate: {
+        len: [1,255]
+      }
     },
     user_id: {
       type: DataTypes.INTEGER,
