@@ -8,6 +8,7 @@ body, html {
   margin: 0;
   font-family: sans-serif;
   color: #333;
+  background-color: #d9e9d3;
 }
 
 a {
@@ -45,6 +46,7 @@ textarea, input {
   padding: .5%;
   border-radius: 5px;
   border: 1px solid #ccc;
+  font-family: sans-serif;
 }
 
 textarea:focus, input:focus {
@@ -53,16 +55,26 @@ textarea:focus, input:focus {
 }
 
 textarea {
-  min-width: 40%;
-  min-height: 100px;
+  min-width: 60%;
+  min-height: 150px;
 }
 
 form > div {
+  padding: 10px;
+  border: 5px 5px #221010;
+}
+
+form > div > div {
   margin-bottom: 2%;
 }
 
 form label {
   display: block;
+}
+
+textarea[name*="post-url"] {
+  min-width: 350px;
+  min-height: 100px;
 }
 
 .wrapper {
@@ -75,15 +87,35 @@ form label {
 }
 
 header {
-  border-bottom: 1px solid #ccc;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 0 1%;
+  padding: 10px 1%;
+  background-color: #221010;
+  color: #d9e9d3;
 }
 
-header h1 {
-  font-size: 1em;
+header nav a {
+  margin-left: 16px;
+  color: #d9e9d3;
+}
+
+header nav .btn-no-style {
+  margin-left: 16px;
+  color: #d9e9d3;
+}
+
+header #title-block {
+  padding: 0 20px;
+  background-color: #d9e9d3;
+  margin: 15px 0 10px 0;
+  border-radius: 5px;
+  box-shadow: 5px 5px #888888;
+}
+
+header #title-block h1 {
+  color: #221010;
+  font-size: 1.5em;
 }
 
 main {
@@ -133,15 +165,6 @@ main {
   margin: -1.5% 0 2% 0;
 }
 
-.upvote-btn {
-  background-color: #197d0f;
-  transition: background-color .1s;
-}
-
-.upvote-btn:hover {
-  background-color: #1f9c13;
-}
-
 .comment-form {
   margin-bottom: 5%;
 }
@@ -167,12 +190,4 @@ main {
 
 .edit-post-form {
   margin-bottom: 5%;
-}
-
-footer {
-  border-top: 1px solid #ccc;
-  display: flex;
-  justify-content: center;
-  padding: 1%;
-  font-size: 110%;
 }
